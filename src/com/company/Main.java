@@ -11,6 +11,8 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/home/taicojeszcze/Programy/SElenium/chromedriver");
 
+        WebDriver driver = new ChromeDriver();
+
 //        ChromeOptions chromeOptions = new ChromeOptions();
 //        chromeOptions.addArguments("--headless");
 //        chromeOptions.addArguments("--no-sandbox");
@@ -21,14 +23,14 @@ public class Main {
 //
 //        Thread.sleep(1000);
 //
-//        if (driver.getPageSource().contains("I'm Feeling Lucky")) {
+//        if (driver.getPageSource().contains("OK")) {
 //            System.out.println("Pass");
 //        } else {
 //            System.out.println("Fail");
 //        }
 //        driver.quit();
 
-    WebDriver driver = new ChromeDriver();
+
 
     driver.get("https://google.com");
     driver.manage().window().maximize();
