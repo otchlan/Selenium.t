@@ -31,6 +31,14 @@ public class Main {
     WebDriver driver = new ChromeDriver();
 
     driver.get("https://google.com");
+    driver.manage().window().maximize();
+
+    String title = driver.getTitle();
+
+    if(title.equalsIgnoreCase("Google"))
+        System.out.println("Title maches");
+    else
+        System.out.println(title);
 
     }
 }
