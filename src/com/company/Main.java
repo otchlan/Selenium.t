@@ -1,5 +1,6 @@
 package com.company;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,11 +11,11 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        //System.setProperty("webdriver.chrome.driver", "/home/taicojeszcze/Programy/SElenium/chromedriver");
-        System.setProperty("webdriver.gecko.driver", "/home/taicojeszcze/Programy/SElenium/geckodriver");
+        System.setProperty("webdriver.chrome.driver", "/home/taicojeszcze/Programy/SElenium/chromedriver");
+        //System.setProperty("webdriver.gecko.driver", "/home/taicojeszcze/Programy/SElenium/geckodriver");
 
-        //WebDriver driver = new ChromeDriver();
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new ChromeDriver();
+        //WebDriver driver = new FirefoxDriver();
 
 
 //        ChromeOptions chromeOptions = new ChromeOptions();
@@ -53,6 +54,17 @@ public class Main {
             System.out.println("Title maches: " + title);
         else
             System.out.println("Test failed " + title);
+
+    driver.navigate().to("https://facebook.com");
+    String tagName = "", username = "";
+
+    tagName = driver.findElement(By.id("email")).getTagName();
+    username = driver.findElement(By.id("pass")).getTagName();
+        System.out.println();
+        System.out.println("tagName: " + tagName);
+        System.out.println("className: " + username);
+
+    driver.findElement(By.id("u_0_2")).click();
 
     driver.close();
 
