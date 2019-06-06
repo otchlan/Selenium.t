@@ -40,31 +40,41 @@ public class Main {
     driver.get("https://google.com");
     driver.manage().window().maximize();
 
-    String title = driver.getTitle();
 
-    if(title.equalsIgnoreCase("Google"))
-        System.out.println("Title maches " + title);
-    else
-        System.out.println("Test failed" + title);
+//    String title = driver.getTitle();
+//
+//    if(title.equalsIgnoreCase("Google"))
+//        System.out.println("Title maches " + title);
+//    else
+//        System.out.println("Test failed" + title);
 
     driver.navigate().to("https://youtube.com");
 
-    title = driver.getTitle();
-        if(title.equalsIgnoreCase("Google"))
-            System.out.println("Title maches: " + title);
-        else
-            System.out.println("Test failed " + title);
+//    title = driver.getTitle();
+//        if(title.equalsIgnoreCase("Google"))
+//            System.out.println("Title maches: " + title);
+//        else
+//            System.out.println("Test failed " + title);
 
     driver.navigate().to("https://facebook.com");
     String tagName = "", username = "";
 
-    tagName = driver.findElement(By.id("email")).getTagName();
-    username = driver.findElement(By.id("pass")).getTagName();
-        System.out.println();
-        System.out.println("tagName: " + tagName);
-        System.out.println("className: " + username);
+//    tagName = driver.findElement(By.id("email")).getTagName();
+//    username = driver.findElement(By.id("pass")).getTagName();
+//        System.out.println();
+//        System.out.println("tagName: " + tagName);
+//        System.out.println("className: " + username);
 
     driver.findElement(By.id("u_0_2")).click();
+        System.out.println();
+
+//    String pSource = driver.getPageSource();
+//        System.out.println(pSource);
+
+//    String cUrl = driver.getCurrentUrl();
+//        System.out.println(cUrl);
+
+
 
     driver.close();
 
