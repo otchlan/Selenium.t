@@ -57,8 +57,8 @@ public class Main {
 //        else
 //            System.out.println("Test failed " + title);
 
-    driver.navigate().to("https://facebook.com");
-    String tagName = "", username = "";
+//    driver.navigate().to("https://facebook.com");
+//    String tagName = "", username = "";
 
 //    tagName = driver.findElement(By.id("email")).getTagName();
 //    username = driver.findElement(By.id("pass")).getTagName();
@@ -66,8 +66,8 @@ public class Main {
 //        System.out.println("tagName: " + tagName);
 //        System.out.println("className: " + username);
 
-    driver.findElement(By.id("u_0_2")).click();
-        System.out.println();
+//    driver.findElement(By.id("u_0_2")).click();
+//        System.out.println();
 
 //    String pSource = driver.getPageSource();
 //        System.out.println(pSource);
