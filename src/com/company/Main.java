@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 
@@ -74,9 +75,13 @@ public class Main {
 //    String cUrl = driver.getCurrentUrl();
 //        System.out.println(cUrl);
 
+//    driver.navigate().to("http://popuptest.com/popuptest2.html");
+//    TimeUnit.SECONDS.sleep(10);
+//    driver.quit();
 
 
     driver.close();
+
 
     }
 }
