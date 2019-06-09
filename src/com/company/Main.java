@@ -38,8 +38,8 @@ public class Main {
 
 
 
-    driver.get("https://google.com");
-    driver.manage().window().maximize();
+   driver.get("https://google.com");
+//    driver.manage().window().maximize();
 
 
 //    String title = driver.getTitle();
@@ -49,7 +49,7 @@ public class Main {
 //    else
 //        System.out.println("Test failed" + title);
 
-    driver.navigate().to("https://youtube.com");
+ //   driver.navigate().to("https://youtube.com");
 
 //    title = driver.getTitle();
 //        if(title.equalsIgnoreCase("Google"))
@@ -57,8 +57,10 @@ public class Main {
 //        else
 //            System.out.println("Test failed " + title);
 
+        //PRZEJDZ NA FB
 //    driver.navigate().to("https://facebook.com");
 //    String tagName = "", username = "";
+
 
 //    tagName = driver.findElement(By.id("email")).getTagName();
 //    username = driver.findElement(By.id("pass")).getTagName();
@@ -66,6 +68,7 @@ public class Main {
 //        System.out.println("tagName: " + tagName);
 //        System.out.println("className: " + username);
 
+        //KLIKNIJ (PRZYCISK: LOGIN)
 //    driver.findElement(By.id("u_0_2")).click();
 //        System.out.println();
 
@@ -75,9 +78,20 @@ public class Main {
 //    String cUrl = driver.getCurrentUrl();
 //        System.out.println(cUrl);
 
+        //STRONA Z POPUP'MI
 //    driver.navigate().to("http://popuptest.com/popuptest2.html");
 //    TimeUnit.SECONDS.sleep(10);
 //    driver.quit();
+
+
+//        driver.navigate().to("http://jsbin.com/usidix/1");
+//        TimeUnit.SECONDS.sleep(5);
+//        driver.switchTo().alert();
+//        String alertMessage = driver.switchTo().alert().getText();
+//        driver.switchTo().alert().accept();
+//        System.out.println(alertMessage);
+
+
 
 
     driver.close();
