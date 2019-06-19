@@ -2,11 +2,13 @@ package com.company;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -83,7 +85,7 @@ public class Main {
 //    TimeUnit.SECONDS.sleep(10);
 //    driver.quit();
 
-
+    //ALERT
 //        driver.navigate().to("http://jsbin.com/usidix/1");
 //        TimeUnit.SECONDS.sleep(5);
 //        driver.switchTo().alert();
@@ -92,9 +94,33 @@ public class Main {
 //        System.out.println(alertMessage);
 
 
+//        driver.navigate().to("https://facebook.com");
+//        WebElement tboxUsername = driver.findElement(By.id("email"));
+//        WebElement tboxPass = driver.findElement(By.id("pass"));
+//        if (tboxUsername.isEnabled() && tboxPass.isEnabled()){
+//            tboxUsername.sendKeys("qwerty");
+//            tboxPass.sendKeys("qwerty");
+//
+//        }
+//        driver.findElement(By.id("u_0_2")).click();
+//        TimeUnit.SECONDS.sleep(5);
 
 
-    driver.close();
+
+
+        try {
+            WebElement un = driver.findElement(By.id("gb_70"));
+            if (un.isEnabled()) {
+                System.out.println("Pass");
+                //un.click();
+            }
+        }catch (NoSuchElementException nsee){
+            System.out.println(nsee.toString());
+        }
+
+
+        TimeUnit.SECONDS.sleep(5);
+   // driver.close();
 
 
     }
